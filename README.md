@@ -34,15 +34,19 @@ tsc --watch
 
 ## tsconfig Configuration
 ```json
-sourceMap: true // To see references in ts (console.log) but generate a new .map file for each ts
-target: "es5", // es2016 no tan usado como es5
-removeComments: true
-// al final
+{
+   "compilerOptions": {
+      "sourceMap": true             "// To see references in ts (console.log) but generate a new .map file for each ts"
+      "target": "es5",              "// es2016 no tan usado como es5"
+      "moduleResolution": "node"    "// Specify how TypeScript looks up a file from a given module specifier. "
+      "removeComments": true
+   },
   "exclude": [
-    // "objetos/*.ts"
+    "//objects/*.ts",
     "node_modules"
   ]
-  moduleResolution: "node" // Specify how TypeScript looks up a file from a given module specifier. 
+}
+ 
 ```
 ## Documentation
 *  [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
