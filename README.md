@@ -1,4 +1,4 @@
-# typescript-guide
+# Typescript-Guide
 ![](https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_typescript_icon_130108.png)
 
 
