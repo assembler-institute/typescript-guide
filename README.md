@@ -37,7 +37,7 @@ tsc --watch
 {
    "compilerOptions": {
       "sourceMap": true             "// To see references in ts (console.log) but generate a new .map file for each ts"
-      "target": "es5",              "// es2016 no tan usado como es5"
+      "target": "es5",              "// "es2016" not as used as "es5"
       "moduleResolution": "node"    "// Specify how TypeScript looks up a file from a given module specifier. "
       "removeComments": true
    },
