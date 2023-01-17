@@ -10,7 +10,10 @@ removeComments: true
 // al final
   "exclude": [
     // "objetos/*.ts"
-    "node_modules2"
+    "./yourdocument"
+  ],
+  "include": [
+    "./yourdocument"
   ]
 
 // If chrome doesn't show console.logs for ts files then go to setting > Preferences > Sources > Enable JavaScript source maps

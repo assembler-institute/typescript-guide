@@ -1,6 +1,6 @@
 
 // Objects
-const batimovil: { bodywork: string, model: string, bulletProof: boolean, passengers: number } = {
+const batMovil: { bodywork: string, model: string, bulletProof: boolean, passengers: number } = {
   bodywork: "Negra",
   model: "6x6",
   bulletProof: true,
