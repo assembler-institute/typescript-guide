@@ -27,7 +27,7 @@
     /* Modules */
     "module": "amd",                                      /* Specify what module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2016, 'es2017, 'es2020' or 'esnext'. */
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
-    // "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
+    "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
@@ -102,6 +102,6 @@
   },
   "exclude": [
     // "objetos/*.ts"
-    "node_modules2"
+    // "node_modules2"
   ]
 }
