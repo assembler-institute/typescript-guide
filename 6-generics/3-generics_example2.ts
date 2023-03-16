@@ -13,7 +13,17 @@ const getPokemon = async (pokemonID: number) => {
   return data;
 };
 
+const getPokemonByID = (name: string): Promise<Pokemon> => {
+  return axios
+    .get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    .then((response) => response.data as Pokemon);
+};
+
 // when we use the async keyword, typescript let us use .then() and .catch() methods
+getPokemonByID('pikachu')
+  .then((data) => console.log(data.base_experience))
+  .catch((err) => console.log(err));
+
 getPokemon(1)
   //   .then((data) => console.log(data.abilities[0].ability.name))
   .then((data) => console.log(data))

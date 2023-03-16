@@ -5,7 +5,7 @@ class Avenger {
   public showName(): void {
     console.log(this.name);
   }
-  private showLastName(): void {
+  protected showLastName(): void {
     console.log(this.realName);
   }
   protected fullName(): string {
@@ -29,8 +29,13 @@ class Xmen extends Avenger {
   showMutantName(): void {
     console.log(`X-MEN ${super.fullName()}`);
   }
+
+  showXmenLastName(): void {
+    console.log(`X-MEN ${super.showLastName()}`);
+  }
 }
 
 const wolverine = new Xmen('Wolverine', 'Logan', true);
 console.log(wolverine);
 wolverine.showMutantName();
+wolverine.showXmenLastName();

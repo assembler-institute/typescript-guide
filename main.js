@@ -54,53 +54,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 (function () {
-    var avenger = 123;
-    var powersAverage;
-    var superPower;
-    avenger = 'Dr Strange';
-    console.log(avenger.charAt(0));
-    avenger = 3.1514;
-    console.log(avenger.toFixed(2));
-})();
-(function () {
-    var numbers = [1, 2, 3, 4, '5', 6];
-    numbers.push(7);
-    console.log(numbers);
-    numbers.push(true);
-    var villians = ['Skul', 'Doraemon', 'Duende Verde'];
-    villians.forEach(function (villian) { return console.log(villian.toUpperCase()); });
-})();
-(function () {
     var isSuperman = false;
     isSuperman = true;
     var isBatman = true;
-    isBatman = (isSuperman) ? true : false;
+    isBatman = isSuperman ? true : false;
     console.log({ isBatman: isBatman });
-})();
-(function () {
-    var AudioLevel;
-    (function (AudioLevel) {
-        AudioLevel[AudioLevel["min"] = 1] = "min";
-        AudioLevel[AudioLevel["medium"] = 2] = "medium";
-        AudioLevel[AudioLevel["medium2"] = 3] = "medium2";
-        AudioLevel[AudioLevel["medium3"] = 4] = "medium3";
-        AudioLevel[AudioLevel["medium4"] = 5] = "medium4";
-        AudioLevel[AudioLevel["medium5"] = 6] = "medium5";
-        AudioLevel[AudioLevel["max"] = 10] = "max";
-    })(AudioLevel || (AudioLevel = {}));
-    var currentAudio = AudioLevel.min;
-    console.log(currentAudio);
-    console.log(AudioLevel);
-})();
-(function () {
-    var error = function (message) {
-        if (false) {
-            throw new Error(message);
-        }
-        return 1;
-    };
-    error('Madre mía con TypeScript');
-    console.log('Hola mundo');
 })();
 (function () {
     var nothing = null;
@@ -127,11 +85,43 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     console.log(((_a = allHeroes[250]) === null || _a === void 0 ? void 0 : _a.toUpperCase()) || 'No existe');
 })();
 (function () {
+    var avenger = 123;
+    var powersAverage;
+    var superPower;
+    avenger = 'Dr Strange';
+    console.log(avenger.charAt(0));
+    avenger = 3.1514;
+    console.log(avenger.toFixed(2));
+})();
+(function () {
+    var numbers = [1, 2, 3, 4, '5', 6];
+    numbers.push(7);
+    console.log(numbers);
+    numbers.push(true);
+    var villians = ['Skul', 'Doraemon', 'Duende Verde'];
+    villians.forEach(function (villian) { return console.log(villian.toUpperCase()); });
+})();
+(function () {
     var hero = ['Dr Strange', 100, true];
     console.log({ hero: hero });
     hero[0] = 'Nobita';
     hero[1] = 50;
     hero[2] = false;
+})();
+(function () {
+    var AudioLevel;
+    (function (AudioLevel) {
+        AudioLevel[AudioLevel["min"] = 1] = "min";
+        AudioLevel[AudioLevel["medium"] = 2] = "medium";
+        AudioLevel[AudioLevel["medium2"] = 3] = "medium2";
+        AudioLevel[AudioLevel["medium3"] = 4] = "medium3";
+        AudioLevel[AudioLevel["medium4"] = 5] = "medium4";
+        AudioLevel[AudioLevel["medium5"] = 6] = "medium5";
+        AudioLevel[AudioLevel["max"] = 10] = "max";
+    })(AudioLevel || (AudioLevel = {}));
+    var currentAudio = AudioLevel.min;
+    console.log(currentAudio);
+    console.log(AudioLevel);
 })();
 (function () {
     function callBatman() {
@@ -141,10 +131,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     console.log({ a: a });
 })();
 (function () {
+    var error = function (message) {
+        if (false) {
+            throw new Error(message);
+        }
+        return 1;
+    };
+    error('Madre mía con TypeScript');
+    console.log('Hola mundo');
+})();
+(function () {
     var xmen = {
         name: 'Storm',
         age: 24,
-        powers: ['Weather manipulation', 'Speed', 'Lightning']
+        powers: ['Weather manipulation', 'Speed', 'Lightning'],
     };
     xmen = {
         name: 'Wolverine',
@@ -152,7 +152,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         powers: ['Regeneration', 'Healing', 'Claws'],
         getName: function () {
             return this.name;
-        }
+        },
     };
 })();
 (function () {
@@ -183,14 +183,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     console.log(myCustomVariable);
 })();
 (function () {
+    var hero = 'Lobezno';
+    function returnName() {
+        return hero;
+    }
+    var activatePowers = function () {
+        return 'Powers activated';
+    };
+    console.log(typeof activatePowers);
+    var heroName = returnName();
+})();
+(function () {
     var fullName = function (firstName, lastName, age) {
-        if (age === void 0) { age = 0; }
-        if (age) {
-            return "".concat(firstName, " ").concat(lastName || 'Pancake', ", is ").concat(age, " years old").toUpperCase();
-        }
-        else {
-            return "".concat(firstName, " ").concat(lastName || 'Pancake');
-        }
+        return "".concat(firstName, " ").concat(lastName);
     };
     var name = fullName('Tony', 'Stark', 45);
     console.log({ name: name });
@@ -204,7 +209,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 })();
 (function () {
     var fullName = function (firstName, lastName, age) {
-        return "".concat(firstName, " ").concat(lastName);
+        if (age === void 0) { age = 0; }
+        if (age) {
+            return "".concat(firstName, " ").concat(lastName || 'Pancake', ", is ").concat(age, " years old").toUpperCase();
+        }
+        else {
+            return "".concat(firstName, " ").concat(lastName || 'Pancake');
+        }
     };
     var name = fullName('Tony', 'Stark', 45);
     console.log({ name: name });
@@ -231,17 +242,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     console.log(myFunction('Spiderman'));
     myFunction = saveTheWorld;
     console.log(myFunction());
-})();
-(function () {
-    var hero = 'Lobezno';
-    function returnName() {
-        return hero;
-    }
-    var activatePowers = function () {
-        return 'Powers activated';
-    };
-    console.log(typeof activatePowers);
-    var heroName = returnName();
 })();
 var Person = (function () {
     function Person(name, lastName, age) {
@@ -303,11 +303,15 @@ var Xmen = (function (_super) {
     Xmen.prototype.showMutantName = function () {
         console.log("X-MEN ".concat(_super.prototype.fullName.call(this)));
     };
+    Xmen.prototype.showXmenLastName = function () {
+        console.log("X-MEN ".concat(_super.prototype.showLastName.call(this)));
+    };
     return Xmen;
 }(Avenger));
 var wolverine = new Xmen('Wolverine', 'Logan', true);
 console.log(wolverine);
 wolverine.showMutantName();
+wolverine.showXmenLastName();
 var Guardian = (function () {
     function Guardian(name, realName) {
         this.name = name;
@@ -416,11 +420,6 @@ var joker = {
 var gothanCity = function (citizen) {
     return citizen.length;
 };
-var Persona = (function () {
-    function Persona() {
-    }
-    return Persona;
-}());
 define("6-generics/1-generics", ["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
@@ -476,6 +475,11 @@ define("6-generics/2-generics_example", ["require", "exports"], function (requir
     };
     console.log(newGenericArrowFunction(titanic).name);
     console.log(newGenericArrowFunction(titanic).cargo);
+    var process = function (value, message) {
+        console.log(message);
+        return value + value;
+    };
+    console.log(process(1, 'Hello'));
 });
 define("6-generics/3-generics_example2", ["require", "exports", "axios"], function (require, exports, axios_1) {
     "use strict";
@@ -492,6 +496,14 @@ define("6-generics/3-generics_example2", ["require", "exports", "axios"], functi
             }
         });
     }); };
+    var getPokemonByID = function (name) {
+        return axios_1.default
+            .get("https://pokeapi.co/api/v2/pokemon/".concat(name))
+            .then(function (response) { return response.data; });
+    };
+    getPokemonByID('pikachu')
+        .then(function (data) { return console.log(data.base_experience); })
+        .catch(function (err) { return console.log(err); });
     getPokemon(1)
         .then(function (data) { return console.log(data); })
         .catch(function (err) { return console.log(err); });
@@ -570,7 +582,7 @@ var uniteHeroes = function () {
 var doNothing = function (numero, texto, booleano, arreglo) { };
 var doNothingEither;
 doNothingEither = doNothing;
-var batimovil = {
+var batMovil = {
     bodywork: "Negra",
     model: "6x6",
     bulletProof: true,
@@ -609,4 +621,41 @@ var apocalipsis = {
 var mystique;
 mystique = charles;
 mystique = apocalipsis;
+var conducirBatimovil = function (auto) {
+    auto.encender = true;
+    auto.velocidadMaxima = 100;
+    auto.acelerar();
+};
+var batimovil = {
+    encender: false,
+    velocidadMaxima: 0,
+    acelerar: function () {
+        console.log("...... gogogo!!!");
+    }
+};
+var guason = {
+    reir: true,
+    comer: true,
+    llorar: false
+};
+var reir = function (guason) {
+    if (guason.reir) {
+        console.log("JAJAJAJA");
+    }
+};
+var ciudadGotica = function (ciudadanos) {
+    return ciudadanos.length;
+};
+var Human = (function () {
+    function Human() {
+        this.nombre = 'Harry Potter';
+        this.edad = 28;
+        this.sexo = 'male';
+        this.estadoCivil = 'single';
+    }
+    Human.prototype.imprimirBio = function () {
+        console.log('lol');
+    };
+    return Human;
+}());
 //# sourceMappingURL=main.js.map

@@ -30,7 +30,7 @@ genericFunction('Hello').toFixed(2);
 // usually we use the T letter to define the generic type
 
 //basic function
-export function newGenericFunction<T>(something: T): T {
+export function newGenericFunction<T>(something: T) {
   return something;
 }
 

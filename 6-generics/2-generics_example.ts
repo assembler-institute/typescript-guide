@@ -15,8 +15,21 @@ const titanic = {
 // look what happens when we use the newGenericArrowFunction() with the titanic object
 // using the Boat interface, we can't access to the cargo property
 
-const newGenericArrowFunction = <T>(something: T): T => {
+const newGenericArrowFunction = <T>(something: T) => {
   return something;
 };
+
+
 console.log(newGenericArrowFunction<Boat>(titanic).name);
 console.log(newGenericArrowFunction<CargoShip>(titanic).cargo);
+
+interface Identity<T, U> {
+  (value: T, message: U): T;
+}
+
+const process: Identity<number, string> = (value, message) => {
+  console.log(message);
+  return value + value;
+};
+
+console.log(process(1, 'Hello'));

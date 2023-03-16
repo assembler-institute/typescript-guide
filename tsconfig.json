@@ -12,7 +12,7 @@
 
     /* Language and Environment */
     "target": "es5", /*es2016 mayormente usado*/         /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "lib": ["ES2015", "dom"],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
     // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
     // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
@@ -47,8 +47,12 @@
     // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
     // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
     // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+
+
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     "outFile": "./main.js",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+
+
     // "outDir": "./",                                   /* Specify an output folder for all emitted files. */
     "removeComments": true,                           /* Disable emitting comments. */
     // "noEmit": true,                                   /* Disable emitting files from a compilation. */
@@ -102,6 +106,13 @@
   },
   "exclude": [
     // "objetos/*.ts"
-    // "node_modules2"
+    // "1-types/*.ts",
+    // "2-objects/*.ts",
+    // "3-functions/*.ts",
+    // "4-classes/*.ts",
+    // "5-interfaces/*.ts",
+    // "6-generics/*.ts",
+    // "7-exercises/*.ts",
+    "node_modules"
   ]
 }
